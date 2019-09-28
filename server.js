@@ -19,7 +19,7 @@ app.use(express.json());
 // app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 const connection = mongoose.connection;
 connection.on('connected', () => {
